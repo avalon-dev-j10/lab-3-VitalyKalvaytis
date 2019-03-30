@@ -3,8 +3,6 @@ package ru.avalon.java.dev.j10.labs;
 import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
-import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
-import ru.avalon.java.dev.j10.labs.sort.ShellSort;
 
 
 
@@ -27,31 +25,48 @@ public class Main {
         RandomInitializer randInitializerBubble = new RandomInitializer(-50, 50);
         randInitializerBubble.initialize(newArrayBubble);
         new BubbleSort().sort(newArrayBubble);
+        System.out.println("Bubble: ");
+        printArray(newArrayBubble);
         
-        for(int i=0; i< newArrayBubble.length; i++){
-            System.out.println("Buuble: " + newArrayBubble[i]);
-        }
+               
+        
+        //for(int i=0; i< newArrayBubble.length; i++){
+          //  System.out.println("Buuble: " + newArrayBubble[i]);
+        //}
         
         int[] newArraySelection = new int[20];
         RandomInitializer randInitializerSelection = new RandomInitializer(-50, 50);
         randInitializerSelection.initialize(newArraySelection);
         new BubbleSort().sort(newArraySelection);
+        System.out.println("Selection: ");
+        printArray(newArraySelection);
         
-        for(int i=0; i< newArraySelection.length; i++){
-            System.out.println("Selection: " + newArraySelection[i]);
-        }
+        //for(int i=0; i< newArraySelection.length; i++){
+          //  System.out.println("Selection: " + newArraySelection[i]);
+        //}
         
         int[] newArrayShell = new int[20];
         RandomInitializer randInitializerShell = new RandomInitializer(-50, 50);
         randInitializerShell.initialize(newArrayShell);
         new BubbleSort().sort(newArrayShell);
+        System.out.println("Shell: ");
+        printArray(newArrayShell);
         
-        for(int i=0; i< newArrayShell.length; i++){
-            System.out.println("Shell: " + newArrayShell[i]);
-        }
+        //for(int i=0; i< newArrayShell.length; i++){
+          //  System.out.println("Shell: " + newArrayShell[i]);
+        //}
+    }
+    
+        public static void printArray(int[] myArray){
         
+            for(int i=0; i< myArray.length; i++){
+            System.out.print(myArray[i] + " ");
+            }
+            System.out.println();
+        }   
         
-        
+          
+}            
         
         
         
@@ -91,5 +106,5 @@ public class Main {
          * 8. Отсортировать массив с использованием
          *    сортировки Шелла.
 	     */
-    }
-}
+
+
