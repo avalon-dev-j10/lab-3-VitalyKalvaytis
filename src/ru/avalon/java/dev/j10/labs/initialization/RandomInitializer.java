@@ -30,7 +30,7 @@ public class RandomInitializer implements Initializer {
     @Override
     public void initialize(int[] array) {
         for (int i = 0; i < array.length; i++){
-            int b = (((int) Math.random()* (prB - prA)) - prA)*i/10;
+            int b = (int)(-50 + ((Math.random()* (prB - prA))));
             array[i] = b;
             //System.out.println(array[i]);
         }
